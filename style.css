@@ -8,16 +8,25 @@ body{
     background-color: #fffdf9;
     overflow-y: hidden;
 }
-header{
+nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 10%;
     padding: 1% 0px;
     margin: 0 5%;
+    flex-wrap: wrap;
+    position: relative;
 }
-header .icons{
+.hamberger{
+    font-size: 1.5rem;
+    cursor: pointer;
     display: none;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 nav ul li{
     display: inline-block;
@@ -111,11 +120,7 @@ footer ul li{
 
 
 nav ul li:hover {
-    background: rgb(251,240,184);
-    background: -moz-linear-gradient(43deg, rgba(251,240,184,1) 0%, rgba(253,235,125,1) 47%, rgba(255,188,21,1) 100%);
-    background: -webkit-linear-gradient(43deg, rgba(251,240,184,1) 0%, rgba(253,235,125,1) 47%, rgba(255,188,21,1) 100%);
-    background: linear-gradient(43deg, rgba(251,240,184,1) 0%, rgba(253,235,125,1) 47%, rgba(255,188,21,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fbf0b8",endColorstr="#ffbc15",GradientType=1);
+    background-color: aquamarine;
     padding: 10px;
     border-radius: 40px;
 }
@@ -127,4 +132,43 @@ nav ul li:hover {
     color: black;
     padding: 10px 30px;
     border-radius: 20px;
+}
+.get_started:hover{
+    background-color: white;
+    color: black;
+}
+@media screen and (max-width:768px) {
+    .nav-ul{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        align-items: start;
+        background-color: white;
+        width: 100%;
+        border:solid;
+        transition: none;
+        top:60px;
+    }
+    .nav-ul li:hover{
+        padding: 0;
+        background-color: white;
+    }
+    
+    .get_started{
+        background-color: white;
+        color: black;
+        padding: 0;
+        border-radius: 0;
+    }
+    .nav-ul li{
+        width: 90%;
+        margin: 5px 10px;
+        transition: none;
+    }
+    .show{
+        display: flex;
+    }
+    .hamberger{
+        display: block;
+    }
 }

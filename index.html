@@ -13,9 +13,10 @@
 <body>
     <div class="container">
         <header>
-            <p class="logo">Medium</p>
             <nav>
-                <ul>
+                <p class="logo">Medium</p>
+                <div class="hamberger"><i class='bx bx-menu '></i></div>
+                <ul class="nav-ul">
                     <li>Our story</li>
                     <li>Membership</li>
                     <li>Write</li>
@@ -23,7 +24,7 @@
                     <li class="get_started">Get started</li>
                 </ul>
             </nav>
-            <i class='bx bx-menu icons'></i>
+            
         </header>
         <main>
             <div class="sub_head">
@@ -55,8 +56,8 @@
         </footer>
     </div>
     <script>
-        document.getElementById("menu-icon").addEventListener("click", function() {
-            document.querySelector("nav ul").classList.toggle("show");
+        document.querySelector(".hamberger").addEventListener("click", ()=> {
+            document.querySelector(".nav-ul").classList.toggle('show');
         });
     </script>
     
