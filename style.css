@@ -25,6 +25,9 @@ nav ul{
     align-items: center;
     flex: wrap;
 }
+#hamberger{
+    display: none;
+}
 nav ul li{
     display: inline-block;
     list-style: none;
